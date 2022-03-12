@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+    
+{%block content%}
+
+<center>
+
+	<h1 class='display-2'> Space Available </h1>
+
+	<br>
+	<br>
+	<video width="700" height="500" controls>
+		<source src={{ url_for('static', filename="carPark.mp4") }} type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+	<source src={{ url_for('static', filename="../static/carPark.mp4") }} type="video/mp4" autoplay="true">
+
+<br>
+
+<h2 class='text-white'>
+	{{data}}
+</h2>
+
+<form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <input type="submit" name="btn" value='Submit' class='btn btn-warning'>
+</form>
+</center>
+
+{%endblock%}

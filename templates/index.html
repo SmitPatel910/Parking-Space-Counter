@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<center>
+<!-- https://github.com/NakulLakhotia/Live-Streaming-using-OpenCV-Flask/blob/main/app.py -->
+<h1 class='display-3'>Welcome to</h1>
+<h1 class='display-3'>Parking Space Counter</h1>
+
+<br>
+<br>
+
+<form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <h2 for="file1">Choose Your Destination</h2>
+    <select name="file1" id="cars">
+      <option value="files1">D-Mart</option>
+    </select>
+    <br><br>
+    <input type="submit" name="btn" value='Submit' class='btn btn-warning'>
+</form>
+
+</center>
+
+{%endblock%}
